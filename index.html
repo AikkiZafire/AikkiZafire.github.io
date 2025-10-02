@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>My Website</title>
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="main.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <h1 class="logo">JL</h1>
+      <nav aria-label="Primary">
+        <button class="nav-toggle" aria-expanded="false" aria-controls="site-menu">Menu</button>
+        <ul id="site-menu" class="site-menu">
+          <li><a href="index.html" aria-current="page">Home</a></li>
+          <li><a href="visualizations.html">Visualizations</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section class="hero">
+      <div class="container hero-inner">
+        <div class="hero-text">
+            <h2 class="headline">Interactive Arts & Technology Student @ SFU</h2>
+            <p>
+                I’m Jie Lan, an SIAT student at SFU exploring UI design, coding, and 3D modeling for games and animation. 
+                I enjoy creating interactive experiences that are fun, meaningful, and useful.
+            </p>
+            <div class="btn-row">
+                <a class="btn" href="visualizations.html">See my visualizations</a>
+                <a class="btn btn-ghost" href="https://github.com/AikkiZafire" target="_blank" rel="noopener">GitHub</a>
+            </div>
+        </div>
+        <figure class="hero-figure">
+            <img src="img/Space Gaze.jpg" alt="Character looking up at the stars and planets" />
+            <figcaption>Always Gazing For The Next Idea . . .</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="container grid two-col gap-xl">
+      <article class="card">
+        <h3>Education</h3>
+        <ul>
+          <li><strong>Simon Fraser University</strong> — B.Sc. Interactive Arts & Technology (IAT) — In Progress</li>
+          <li>Relevant coursework: Animation, Data Visualization, Game Development, Web Development</li>
+        </ul>
+      </article>
+
+      <article class="card">
+        <h3>Skills</h3>
+        <ul class="skills-list">
+          <li>HTML, CSS, JavaScript</li>
+          <li>React / React Native</li>
+          <li>Figma</li>
+          <li>Arduino prototyping</li>
+          <li>Maya 3D Modelling</li>
+          <li>Unreal Engine 5 Immersive Environments</li>
+        </ul>
+      </article>
+    </section>
+
+    <section class="container grid two-col gap-xl">
+      <article class="card">
+        <h3>Experience & Projects</h3>
+        <ul class="timeline">
+          <li>
+            <span class="t-title">Automated AC Fan</span>
+            <span class="t-meta">IAT267 Course Project</span>
+            <p>Designed and Prototyped an AC fan using sensors and coded using Java Processing & C++.
+                The purpose of this project is to create an automated fan that can adjust base on the condition of the
+                room it's in to create a cooling experience for the user.
+            </p>
+          </li>
+          <li>
+            <span class="t-title">Short Animation Film: Everfade</span>
+            <span class="t-meta">IAT343 Course Project</span>
+            <p>Short animation film created in Maya. A story about A grief-stricken knight on a journey
+                hunting down his wife’s killer, culminating in a brutal confrontation in a ruined church. 
+            </p>
+          </li>
+        </ul>
+      </article>
+
+      <article class="card">
+        <h3>Gallery</h3>
+        <div class="gallery">
+          <img src="img/acFan.png" alt="Sketching interface ideas" />
+          <img src="img/everfade.jpg" alt="animation film thumbnail of a church on a hill and a red moon behind it" />
+        </div>
+      </article>
+    </section>
+
+    <section id="contact" class="container card">
+      <h3>Contact</h3>
+      <p>Email: <a href="mailto:aethernet70.07@gmail.com">aethernet70.07@gmail.com</a></p>
+      <p>GithHub: <a href="https://github.com/AikkiZafire" target="_blank" rel="noopener">github.com</a></p>
+      <p>LinkedIn: <a href="https://www.linkedin.com/in/jie-lan-871639237/" target="_blank" rel="noopener">linkedin.com</a></p>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; <span id="year"></span> Jie Lan • <a href="README.md">README</a></p>
+    </div>
+  </footer>
+</body>
+</html>
