@@ -22,7 +22,7 @@ fetchData().then(async (data) => {
         return seen > 0 && ok / seen >= 0.5;
     };
     const types = cols.map(c => {
-        const t = isNumCol(c) ? (c.toLowerCase()==="year" ? "ordinal (year)" : "numeric") : "categorical";
+        const t = isNumCol(c) ? (c.toLowerCase()==="year" ? "ordinal" : "numeric") : "categorical";
         return { col: c, type: t };
     });
 
