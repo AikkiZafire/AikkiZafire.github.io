@@ -64,6 +64,10 @@
         <!-- 2) Global Sales by Genre & Platform -->
         <section class="card vis-section">
             <h2 class="vis-title">Visualization 1 — Global Sales by Genre & Platform</h2>
+            <p class="vis-caption">
+                I thought a grouped bar chart was ideal for an introduction on the dataset because it clearly compares multiple genres across a variety of platforms. 
+                The color encoding for genres would add clarity, while sorting platforms by total sales highlighting the market leaders.
+            </p>
             <div class="viz-wrap">
             <div id="view1"></div>
             </div>
@@ -72,6 +76,9 @@
         <!-- 3) Sales Over Time -->
         <section class="card vis-section">
             <h2 class="vis-title">Visualization 2 — Sales Over Time</h2>
+            <p class="vis-caption">
+                I created an interactive line chart that can filter series. This allows the user to isolate specific platforms or genres to see detailed trends.
+            </p>
             <div class="vis-controls">
                 <label>Group by:
                     <select id="groupBy">
@@ -80,17 +87,23 @@
                     </select>
                 </label>
                 </div>
+
+                <div class="viz-wrap">
+                <div id="view2"></div>
                 <p class="vis-caption">
                     Note: Click on a data point to see series detail / empty space to reset.
                 </p>
-                <div class="viz-wrap">
-                <div id="view2"></div>
-                </div>
-            </section>
+            </div>
+        </section>
 
         <!-- 4) Regional Sales by Platform -->
         <section class="card vis-section">
             <h2 class="vis-title">Visualization 3 — Regional Sales vs Platform</h2>
+            <p class="vis-caption">
+                I created this stacked bar chart that can observe regional sales in normalized or percentage view. 
+                This chart makes it easy to compare the share in sales in different regions. Normalized view shows a ranking hiearchy in platform sales and percentage view
+                creates a visual ratio of how much of each platform sales cover regionally.
+            </p>
             <label class="vis-controls">
                 <input type="checkbox" id="asPercent" />
                 Show as percentage
@@ -102,8 +115,12 @@
 
         <!-- 5) Visual Story -->
         <section class="card vis-section">
-            <h2 class="vis-title">Visualization 4 — Regional Genre Preferences: Japan vs. North America</h2>
-            <p class="vis-caption">“East vs West”: How genres differ between Japan and North America.</p>
+            <h2 class="vis-title">Visualization 4 — "East" vs "West "Regional Genre Preferences: Japan vs. North America</h2>
+            <p class="vis-caption">
+                I wanted to compare the top 12 genres in Japan and North America using a mirrored bar chart. 
+                This layout emphasizes contrast and makes cultural differences visually apparent.
+                Each side uses the same color scale, and axis labels are displayed as absolute percentages for readability.
+            </p>
             <div class="viz-wrap">
             <div id="view4"></div>
             </div>
