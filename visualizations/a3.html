@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>A3 Visualizations</title>
+    
+    <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite-api@5.6.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-tooltip"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+
+    <!-- CSS & JavaScript -->
+    <script>
+      const options = {
+        config: {
+          // Vega-Lite default configuration
+        },
+        init: (view) => {
+          // initialize tooltip handler
+          view.tooltip(new vegaTooltip.Handler().call);
+        },
+        view: {
+          // view constructor options
+          // remove the loader if you don't want to default to vega-datasets!
+          loader: vega.loader({
+            baseURL: "https://cdn.jsdelivr.net/npm/vega-datasets@2/",
+          }),
+          renderer: "canvas",
+        },
+      };
+
+      // register vega and vega-lite with the API
+      vl.register(vega, vegaLite, options);
+    </script>
+
+    <link rel="stylesheet" href="../style.css" />
+
+</head>
+<body>
+    <header class="site-header">
+        <div class="container header-inner">
+        <h1 class="logo">JL</h1>
+        <nav aria-label="Primary">
+            <ul class="site-menu">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../visualizations" aria-current="page">Visualizations</a></li>
+            </ul>
+        </nav>
+        </div>
+    </header>
+
+    <main id="main-content" class="container">
+        <h1>Global Video Game Sales (1980 - 2020)</h1>
+
+        <!-- 1) Describe the Data -->
+        <section class="card vis-section">
+            <h2 class="vis-title">Describing the Data</h2>
+            <div id="type-summary" class="vis-text"></div>
+            <div id="stats" class="vis-text"></div>
+        </section>
+
+        <!-- 2) Global Sales by Genre & Platform -->
+        <section class="card vis-section">
+            <h2 class="vis-title">Visualization 1 — Global Sales by Genre & Platform</h2>
+            <div class="viz-wrap">
+            <div id="view1"></div>
+            </div>
+        </section>
+
+        <!-- 3) Sales Over Time -->
+        <section class="card vis-section">
+            <h2 class="vis-title">Visualization 2 — Sales Over Time</h2>
+            <div class="vis-controls">
+                <label>Group by:
+                    <select id="groupBy">
+                    <option value="Platform">Platform</option>
+                    <option value="Genre">Genre</option>
+                    </select>
+                </label>
+                </div>
+                <p class="vis-caption">
+                    Note: Click on a data point to see series detail / empty space to reset.
+                </p>
+                <div class="viz-wrap">
+                <div id="view2"></div>
+                </div>
+            </section>
+
+        <!-- 4) Regional Sales vs Platform -->
+        <section class="card vis-section">
+            <h2 class="vis-title">Visualization 3 — Regional Sales vs Platform</h2>
+            <label class="vis-controls">
+                <input type="checkbox" id="asPercent" />
+                Show as percentage
+            </label>
+            <div class="viz-wrap">
+            <div id="view3"></div>
+            </div>
+        </section>
+
+        <!-- 5) Visual Story -->
+        <section class="card vis-section">
+            <h2 class="vis-title">Visualization 4 — Regional Genre Preferences: Japan vs. North America</h2>
+            <p class="vis-caption">“East vs West”: How genres differ between Japan and North America.</p>
+            <div class="viz-wrap">
+            <div id="view4"></div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+        <p>&copy; <span id="year"></span> Jie Lan • <a href="README.md">README</a></p>
+        </div>
+    </footer>
+
+    <script type="module" src="../js/a3vis.js"></script>
+</body>
+</html>

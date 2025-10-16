@@ -245,3 +245,57 @@ a:hover{
   display: flex;
   justify-content: center;
 }
+
+/* ====== A3 Visualization Page ====== */
+.vis-section {
+    padding: 0;
+}               
+.vis-title{
+    margin: var(--space-lg); 
+}    
+.vis-text{ 
+    margin: 0 var(--space-lg) var(--space); 
+}
+.vis-caption{
+    margin: 0 var(--space-lg) var(--space); 
+    color: var(--muted);
+}
+
+.vis-controls {
+  margin: 0 var(--space-lg) var(--space);
+  display: flex; align-items: center; gap: .75rem;
+}
+.vis-controls select,
+.vis-controls input[type="checkbox"] {
+  background: var(--card);
+  color: var(--text);
+  border: 1px solid #294055;
+  border-radius: 10px;
+  padding: .4rem .6rem;
+}
+
+/* Make the embed fit your .viz-wrap nicely */
+.viz-wrap { 
+  /* you already have padding, bg, border etc. */
+  overflow: auto;
+}
+
+/* Ensure charts size correctly in dark layout */
+#view1, #view2, #view3, #view4 {
+  inline-size: 100%;           /* width */
+  min-block-size: 280px;       /* min-height so space is visible pre-render */
+}
+
+/* Vega-Embed elements should not overflow */
+.vega-embed, .vega-embed > canvas, .vega-embed > svg {
+  max-width: 100%;
+  display: block;
+}
+
+/* Slightly dim Vega tooltip to match theme */
+.vega-tooltip {
+  background: #0f1720 !important;
+  color: var(--text) !important;
+  border: 1px solid #1b2a3a !important;
+  box-shadow: 0 10px 30px rgba(0,0,0,.35) !important;
+}
